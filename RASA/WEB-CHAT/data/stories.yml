@@ -1,0 +1,152 @@
+version: "3.1"
+
+stories:
+
+
+- story: interactive_story_1
+  steps:
+  - intent: first_layer
+  - action:  utter_lang_selection
+  - action: bot_form_1
+  - active_loop: bot_form_1
+  - slot_was_set:
+    - requested_slot: choices_1
+  - slot_was_set:
+    - choices_1: options
+  - slot_was_set:
+    - requested_slot: choices_2
+  - slot_was_set:
+    - choices_2: options
+  - slot_was_set:
+    - requested_slot: choices_3
+  - slot_was_set:
+    - choices_3: options
+  - slot_was_set:
+    - requested_slot: choices_4
+  - slot_was_set:
+    - choices_4: options
+  - slot_was_set:
+    - requested_slot: choices_5
+  - slot_was_set:
+    - choices_5: options
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: action_reset_loop
+
+
+# - story: intrrupt_story_1
+#   steps:
+#   - intent: first_layer
+#   - action:  utter_lang_selection
+#   - action: bot_form_1
+#   - active_loop: bot_form_1
+#   - slot_was_set:
+#     - requested_slot: choices_1
+#   - slot_was_set:
+#     - choices_1: options
+#   - intent: first_layer
+#   - action: utter_lang_selection
+#   - action: bot_form_1
+#   - active_loop: bot_form_1
+#   - slot_was_set:
+#     - requested_slot: choices_1
+#   - slot_was_set:
+#     - choices_1: options
+#   - slot_was_set:
+#     - requested_slot: choices_2
+#   - slot_was_set:
+#     - choices_2: options
+#   - slot_was_set:
+#     - requested_slot: choices_3
+#   - slot_was_set:
+#     - choices_3: options
+#   - slot_was_set:
+#     - requested_slot: choices_4
+#   - slot_was_set:
+#     - choices_4: options
+#   - slot_was_set:
+#     - requested_slot: choices_5
+#   - slot_was_set:
+#     - choices_5: options
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: utter_submit
+#   - action: action_restart
+
+
+# - story: intrrupt_story_2
+#   steps:
+#   - intent: first_layer
+#   - action:  utter_lang_selection
+#   - action: bot_form_1
+#   - active_loop: bot_form_1
+#   - slot_was_set:
+#     - requested_slot: choices_1
+#   - slot_was_set:
+#     - choices_1: options
+#   - slot_was_set:
+#     - requested_slot: choices_2
+#   - slot_was_set:
+#     - choices_2: options
+#   - intent: first_layer
+#   - action: utter_lang_selection
+#   - action: bot_form_1
+#   - active_loop: bot_form_1
+#   - slot_was_set:
+#     - requested_slot: choices_1
+#   - slot_was_set:
+#     - choices_1: options
+#   - slot_was_set:
+#     - requested_slot: choices_2
+#   - slot_was_set:
+#     - choices_2: options
+#   - slot_was_set:
+#     - requested_slot: choices_3
+#   - slot_was_set:
+#     - choices_3: options
+#   - slot_was_set:
+#     - requested_slot: choices_4
+#   - slot_was_set:
+#     - choices_4: options
+#   - slot_was_set:
+#     - requested_slot: choices_5
+#   - slot_was_set:
+#     - choices_5: options
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: utter_submit
+#   - action: action_restart
+
+
+
+
+# - story: interactive_story_2
+#   steps:
+#   - intent: first_layer
+#   - action: utter_lang_selection
+
+
+# - story: interactive_story_2
+#   steps:
+#   - action: bot_form_1
+#   - active_loop: bot_form_1
+#   - intent: first_layer
+#   - action: action_deactivate_loop
+
+
+
+# - story: interactive_story_8
+#   steps:
+#   - action: bot_form_1
+#   - active_loop: bot_form_1
+#   - intent: first_layer
+#   - action: action_deactivate_loop
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_restart
+

@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-alphanum",
+      "2": "I-alphanum",
+      "3": "L-alphanum",
+      "4": "U-alphanum",
+      "5": "B-options",
+      "6": "I-options",
+      "7": "L-options",
+      "8": "U-options",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-alphanum": 1,
+      "I-alphanum": 2,
+      "L-alphanum": 3,
+      "U-alphanum": 4,
+      "B-options": 5,
+      "I-options": 6,
+      "L-options": 7,
+      "U-options": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

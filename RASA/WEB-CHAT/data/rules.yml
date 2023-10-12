@@ -1,0 +1,72 @@
+version: "3.1"
+
+rules:
+
+# - rule: strict path
+#   conversation_start: true
+#   steps:
+#   - intent: first_layer
+#   - action: utter_lang_selection
+#   - action: bot_form_1
+
+
+- rule: Activate bot Form 1
+  conversation_start: true
+  steps:
+  - intent: first_layer
+  - action: utter_lang_selection
+  - action: bot_form_1
+  - active_loop: bot_form_1
+
+- rule: Submit bot Form
+  condition:
+  - active_loop: bot_form_1
+  steps:
+  - action: bot_form_1
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit
+  - action: action_reset_loop
+
+
+- rule: intrrupt path 1
+  condition:
+  - active_loop: bot_form_1
+  steps:
+  - intent: first_layer
+  - action: utter_ask_valid_responce
+  - action: bot_form_1
+
+- rule: intrrupt path 2
+  condition:
+  - active_loop: bot_form_1
+  steps:
+  - intent: selection_2
+  - action: utter_ask_valid_responce
+  - action: bot_form_1
+
+- rule: intrrupt path 3
+  conversation_start: true
+  condition:
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - or:
+    - intent: selection_2
+    - intent: selection_1
+  - action: utter_ask_start_valid_responce
+  - action: action_check_input_validity
+
+- rule: reset_loop_on_submit
+  steps:
+  - intent: '*'
+  - action: utter_submit
+  - action: action_reset_loop
+
+- rule: handle_restart
+  condition:
+  - active_loop: null
+  steps:
+  - action: action_reset_loop

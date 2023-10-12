@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/anime/favi.png">
+    <!--Author Prasath M UI/UX developer- ASE TNEGA-->
+
+</head>
+<body>
+        <div class="bg">
+            <div class="circles">
+              <div id="a"><img src="/assets/img/anime/msg.png" alt=""></div>
+              <div id="b"><img src="/assets/img/anime/Vector-3.png" alt=""></div>
+              <div id="c"><img src="/assets/img/anime/Vector-1.png" alt=""></div>
+              <div id="d"><img src="/assets/img/anime/Vector-3.png" alt=""></div>
+              <div id="e"><img src="/assets/img/anime/msg.png" alt=""></div>
+              <div id="f"><img src="/assets/img/anime/Vector-1.png" alt=""></div>
+            </div>
+        </div>
+            
+        <div class="top text-center">
+            <h2 class="deptname">
+                Inspector General of Registration
+            </h2>
+            <h4>Reginet - IGR Chatbot</h4>
+        </div>
+
+        
+        <div class="main-section container">
+          <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    customData: { language: "en" },
+                    socketUrl: "http://65.2.116.202:5056",
+                    // socketUrl: "http://192.168.5.19:5005",
+                    title :'Reginet',
+                    docViewer: true,
+                    attachmentPrompt: true,
+                    // add other props here
+                  },
+                  null
+                );
+                window.addEventListener("message", function (event) {
+                console.log("Received message: ", event.data);
+                if (event.data && event.data.attachment_url) {
+                  console.log("Setting iframe src to: ", event.data.attachment_url);
+                  document.getElementById("myPDF").src = event.data.attachment_url;
+          }
+        });
+        
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
+    <img src="/assets/img/TN_Logo.png" class="logo" alt="">
+        </div>
+        <div class="toon row container-fluid d-flex align-items-center justify-content-center">
+            <div class="col-sm">
+                <img id="mob" src="/assets/img/anime/Frame 10.png" alt="">
+            </div>
+            <div class="col-sm">
+                <p>Hey there, I'm RegiNet – the AI sidekick created to simplify your interaction with the <span class="bigfonts">IGR</span> Tamil Nadu Registration
+                    Department. Got questions about property registration, documentation, or processes? I've got answers. I'm here <span class="bigfonts">24/7</span>,
+                    ready to untangle complexities and make your experience seamless. <br> Let's navigate registrations together – the smart
+                    way with <span class="bigfonts">Reginet!</span></p>
+               
+            </div>
+        </div> 
+
+
+
+<style>
+
+    #myPDF {
+      width: 85%;
+      height: 975px;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <a class="col-md-4 mb-0 text-body-secondary" href="https://tnega.tn.gov.in/">Designed and Developed by TNeGA</a>
+  
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+    </footer>
+  </div>
+
+
+
+    </body>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+</html>
+
+
+

@@ -1,0 +1,1285 @@
+version: '3.1'
+intents:
+- affirm
+- deny
+- goodbye
+- first_layer
+- mood_great
+- mood_unhappy
+- selection_1
+- selection_2
+
+entities:
+- options
+- alphanum
+
+slots:
+  choices_1:
+    type: text
+    influence_conversation: true 
+    mappings:
+    - type: from_entity
+      entity: options
+
+  choices_2:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: options
+
+  choices_3:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: options
+
+  choices_4:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: options
+
+  choices_5:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: options
+
+
+forms:
+  bot_form_1:
+    required_slots:
+    - choices_1
+    - choices_2
+    - choices_3
+    - choices_4
+    - choices_5
+
+responses:
+  
+  
+  utter_lang_selection:
+  - text: |-
+
+      பதிவுத்துறை உங்களை வரவேற்கிறது.
+      உங்களுக்கு விருப்பமான மொழியை தேர்வு செய்க
+
+      1. தமிழ்  
+      2. English
+      
+
+
+  utter_main_layer_en:
+  - text: |
+        Vannakkam!
+        I am Reginet, your personal assisatant.
+        I can help you with the following services offered by Registration department
+        
+        1. Document Registration
+        2. Encumbrance Certificate
+        3. View Encumbrance Certificate
+        4. Certified copy
+        5. Marriage Registration
+        6. Firm Registration
+        7. Society Registration
+        8. Payment and Refund of payment
+        9. Token Service
+        10. Online Index Correction
+        11. If any further clarification/other queries 
+        12. Go Back to main menu
+        Please select your required service from options above to move ahead.Example Reply 1 for Document Registration
+
+
+
+  utter_ask_2nd_layer_en_Document_Registration:
+  - text: |
+        you have selected any one of option 1.Document Registration
+
+        1. Know Your Jurisdiction 
+        2. Know Your Guideline
+        3. User Registration
+        4. Sample Draft deeds
+        5. Document creation
+        6. Stamp duty and Registration fee
+        7. Online Index Correction
+        8. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l1_1:
+  - text: | 
+      You have selected ption 1. Know Your Jurisdiction
+
+      https://tnreginet.gov.in/portal/
+
+  utter_ask_2nd_layer_en_Document_Registration_l1_2:
+  - text: | 
+      You have selected option 2. Know Your Jurisdiction
+      https://tnreginet.gov.in/portal/
+
+  utter_ask_2nd_layer_en_Document_Registration_l1_3:
+  - text: | 
+        you have selected option 3.User Registration
+
+        1. step wise procedure document for user registration
+        2. video for user registration
+        3. Go back to main menu
+
+  utter_ask_2nd_layer_en_Document_Registration_l1_4:
+  - text: | 
+        you have selected option 4. Sample Draft deeds
+
+
+         1. SALE DEED
+         2. SETTLEMENT DEED
+         3. PARTITION DEED
+         4. RELEASE DEED
+         5. GENERAL POWER OF ATTORNEY 
+             DEED
+         6. CONSTRUCTION AGREEMENT
+         7. SIMPLE MORTAGE WITHOUT 
+             POSSESSION
+         8. RECEIPT
+         9. WILL DEED
+        10. GENERAL POWER OF ATTORNEY 
+              CANCELLATION DEED
+        11. RECTIFICATION DEED
+        12. TRUST DEED
+        13. ADOPTION DEED
+        14. DEPOSIT OF TITLE DEED
+        15. LEASE DEED
+        16. SIMPLE MORTAGE WITH 
+              POSSESSION
+        17 .GO BACK TO MAIN MENU
+
+  utter_ask_2nd_layer_en_Document_Registration_l1_5:
+  - text: | 
+        you have selected option 5. Document Creation
+
+        1. Step wise procedure for document creation
+        2. Video for document creation
+        3. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l1_6:
+  - text: | 
+
+        you have selected option 6. Stamp duty and Registration fee	 
+
+        1. Document for Stamp duty and Registration Fee
+        2. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l1_7:
+  - text: | 
+        you have selected option 6. online index correction	
+
+        1. Step wise procedure document for index Correction
+        2. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_1:
+  - text: | 
+        you have selected option 1. sale deed
+
+        1. Model draft for Sale deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_2:
+  - text: | 
+        you have selected option 2. Settlement deed
+
+        1. Model draft for Settlement deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_3:
+  - text: | 
+        you have selected option 3. Parition deed
+
+        1. Model draft for Parition deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_4:
+  - text: | 
+        you have selected option 4. Release deed
+
+        1. Model draft for Release deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_5:
+  - text: | 
+        you have selected option 5. Special power of attorney
+
+        1. Model draft for Special power of attorney document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_6:
+  - text: | 
+        you have selected option 6. Construction deed
+        
+        1. Model draft for Construction deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_7:
+  - text: | 
+        you have selected option 7. Simple Mortage without Possession deed
+        
+        1. Model draft for Simple Mortage without possesion  deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_8:
+  - text: | 
+        you have selected option 8. Receipt deed
+        
+        1. Model draft for Receipt deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_9:
+  - text: | 
+        you have selected option 9. Will deed
+        
+        1. Model draft for Will deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_10:
+  - text: | 
+        you have selected option 10. General Power of Attorney Cancellation deed
+        
+        1. Model draft for General Power of Attorney Cancellation deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_11:
+  - text: | 
+        you have selected option  11. Rectification deed
+        
+        1. Model draft for Rectification deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_12:
+  - text: | 
+        you have selected option 12. Trust deed
+        
+        1. Model draft for Trust deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_13:
+  - text: | 
+        you have selected option 13. Adoption Deed
+        
+        1. Model draft for Adoption deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_14:
+  - text: | 
+        you have selected option 14. Deposit of title deed
+        
+        1. Model draft for Deposit of title  deed document
+        2. Go back to the main menu
+
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_15:
+  - text: | 
+        you have selected option 15. Lease Deed
+        
+        1. Model draft for lease document
+        2. Go back to the main menu
+
+  utter_ask_2nd_layer_en_Document_Registration_l2_16:
+  - text: | 
+        you have selected option 16. Simple Mortage with Possession deed
+        
+        1. Model draft for Simple Mortage with possesion  deed document
+        2. Go back to the main menu
+
+
+
+  utter_ask_2nd_layer_en_Encumbrance_Certificate:
+  - text: |-
+      you have selected option 2.Encumbrance Certificate
+
+      1. Online registration for portal user
+      2. Apply for Encumbrance Certificate
+      3. Go back to main menu
+
+  utter_ask_2nd_layer_en_Encumbrance_Certificate_l1_1:
+  - text: |-
+      you have selected option 1. user registration		
+
+      1. Step wise procedure document for  user registration
+      2. video for user registration
+      3. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Encumbrance_Certificate_l1_2:
+  - text: |-
+      you have selected option 2. applying Encumbrance Certificate		
+
+      1. Step wise procedure document for applying Encumbrance Certificate
+      2. video for for applying Encumbrance Certificate
+      3. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_View_Encumbrance_Certificate:
+  - text: |-
+        you have selected any one of option 3. View Encumbrance Certificate		
+
+        1. Video for View Encumbrance Certificate		
+        2. Go back to the main menu		
+
+
+
+  utter_ask_2nd_layer_en_certified_copy:
+  - text: |-
+      you have selected option 4.certified copy
+
+      1. Online registration for portal user
+      2. Apply for Certified Copy
+      3. Go back to main menu
+
+  utter_ask_2nd_layer_en_certified_copy_l1_1:
+  - text: |-
+      you have selected option 1. online registration for portal user
+
+      1. Step wise procedure document for user registration
+      2. video for user registration
+      3. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_certified_copy_l1_2:
+  - text: |-
+      you have selected option 2. Apply for Certified Copy
+
+      1. Step wise procedure document for applying Certified Copy
+      2. video for for applying Certified Copy
+      3. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Marriage_Registration:
+  - text: |-
+      you have selected option 5 Marriage Registration
+
+      1. Marriage Registration 
+      2. Certiied Copy of Marriage Certificate
+      3. Online correction
+      4. Go back to main menu
+      Please select an option to move ahead.Example Reply 1 for Document Registration
+
+  utter_ask_2nd_layer_en_Marriage_Registration_l1_1:
+  - text: |-
+
+      1. Hindhu Marriage Registration
+      2. Tamilnadu Marriage Registration
+      3. Special Marriage Registration
+      4. Christian Marriage Registration
+      5. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Marriage_Registration_l1_2:
+  - text: |-
+      1. step wise procedure document for user registration
+      2. video for user registration
+      3. step wise procedure document for applying copy for Hindhu Marriage
+      4. step wise procedure document for applying copy for Tamilnadu Marriage
+      5. step wise procedure document for applying copy for Special Marraige 
+      6. step wise procedure document for applying copy Christian Marriage
+      7. video for applying copy
+      8. go back to main menu
+
+
+  utter_ask_2nd_layer_en_Marriage_Registration_l1_3:
+  - text: |-
+      1. Step wise procedure document for user registration
+      2. Video for user registration
+      3. Step wise procedure document  for Hindhu Marriage Correction
+      4. Step wise procedure document for  Tamilnadu Marriage Correction
+      5. Step wise procedure document for Special Marraige Correction
+      6. Step wise procedure document for  Christian Marriage Correction
+      7. video for applying copy
+      8. Go back to main menu
+
+
+
+  utter_ask_2nd_layer_en_Marriage_Registration_l2_1:
+  - text: |-
+      welcome to hindhu marriage Registration
+
+      1. Step wise procedure document for user registration
+      2. video for user registration
+      3. Step wise procedure document for hindhu Marriage Registration
+      4. video for Hindhu Marriage Registration
+      5. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Marriage_Registration_l2_2:
+  - text: |-
+      welcome to Tamilnadu marriage Registration
+
+      1. Step wise procedure document for user registration
+      2. Video for user registration
+      3. Step wise procedure document for Tamilnadu Marriage Registration
+      4. Video for Tamilnadu Marriage Registration
+      5. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Marriage_Registration_l2_3:
+  - text: |-
+      1. Step wise procedure document for user registration
+      2. Video for user registration
+      3. Step wise procedure document for Special Marriage Registration
+      4. Video for Special Marriage Registration
+      5. Step wise procedure document for Special Marriage_other forms Registration
+      6. Video for Special Marriage Registration_other forms
+      7. Go back to main menu
+
+  utter_ask_2nd_layer_en_Marriage_Registration_l2_4:
+  - text: |-
+      welcome to Christian marriage Registration
+
+      1. Step wise procedure document for user registration
+      2. Video for user registration
+      3. Step wise procedure document for ChristianMarriage Registration
+      4. Go back to main menu
+
+
+
+  utter_ask_2nd_layer_en_Firm_Registration:
+  - text: |-
+      you have selected option 6. Firm Registration
+
+      1. New firm registration
+      2. Annual filing
+      3. Alternation in name or location of firm
+      4. Certified copy for firm registration
+      5. Firm Registration alternation in branch Details
+      6. Dissolution of firm
+      7. Change in constitution of firm
+      8. Go back to main menu
+
+  utter_ask_2nd_layer_en_Firm_Registration_l1_1:
+  - text: |-
+      you have selected option 1 .new firm Registration
+
+      1. Step wise procedure document for new firm registration
+      2. Video for new firm registration
+      3. Go back to main menu
+
+  utter_ask_2nd_layer_en_Firm_Registration_l1_2:
+  - text: |-
+      you have selected option 2. Annual filing
+
+      1. Step wise procedure document for annual filing
+      2. Go back to main menu
+
+  utter_ask_2nd_layer_en_Firm_Registration_l1_3:
+  - text: |-
+      you have selected option 3. Name/location of firm
+
+      1. Step wise procedure document for name/location registration
+      2. Go back to main menu
+
+  utter_ask_2nd_layer_en_Firm_Registration_l1_4:
+  - text: |-
+      you have selected option 4. Certified copy of firm Registration
+
+      1. Step wise procedure document for certified copy for firm
+      2. Go back to main menu
+
+  utter_ask_2nd_layer_en_Firm_Registration_l1_5:
+  - text: |-
+      you have selected option 5. Alternation in firm Registration
+
+      1. Step wise procedure document for alternation in firm registration
+      2. Go back to main menu
+
+  utter_ask_2nd_layer_en_Firm_Registration_l1_6:
+  - text: |-
+      you have selected option 6. Dissolution of firm
+
+      1. Step wise procedure document for dissolution of firm
+      2. Go back to main menu
+
+  utter_ask_2nd_layer_en_Firm_Registration_l1_7:
+  - text: |-
+      you have selected option 7. Change in constitution of firm
+
+      1. Step wise procedure document for .Change in constitution of firm
+      2. Go back to main menu
+
+
+
+  utter_ask_2nd_layer_en_society_Registration:
+  - text: |-
+      you have selected option 7. society_Registration
+
+      1. Society registration
+      2. Annual filing
+      3. Alternation in name 
+      4. Appeal process for Society
+      5. Change in commitee of society
+      6. Go back to main menu
+
+  utter_ask_2nd_layer_en_society_Registration_l1_1:
+  - text: |-
+      you have selected option 1. New Society Registration
+
+      1. Step wise procedure document for user registration
+      2. Video for user registration
+      3. Go back to main menu
+
+  utter_ask_2nd_layer_en_society_Registration_l1_2:
+  - text: |-
+      you have selected option 2. Annual filing
+
+      1. Step wise procedure document for Annual Filing
+      2. Go back to main menu
+
+  utter_ask_2nd_layer_en_society_Registration_l1_3:
+  - text: |-
+      you have selected option 3. Alternation in name of Society
+
+      1. Step wise procedure document for alternation in name of society
+      2. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_society_Registration_l1_4:
+  - text: |-
+      you have selected option 5. Appeal process for Society
+
+      1. Step wise procedure document for appeal process for Society
+      2. Go back to main menu
+
+  utter_ask_2nd_layer_en_society_Registration_l1_5:
+  - text: |-
+      you have selected option 6. Change in Committee of firm
+
+      1. Step wise procedure document for change in commitee of firm
+      2. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_Payment_and_Refund_of_payment:
+  - text: |-
+      you have selected any one of option 8. Payment and Refund of payment
+      
+      1. Payment Collection 		
+      2. Refund of Payment Collection
+      3. Go back to the main menu		
+
+
+  utter_ask_2nd_layer_en_Payment_and_Refund_of_payment_l1_1:
+  - text: |-
+      you have selected any one of option 1. Payment Collection
+
+      1. Video for Payment Collection 		
+      2. Go back to the main menu		
+
+
+  utter_ask_2nd_layer_en_Payment_and_Refund_of_payment_l1_2:
+  - text: |-
+      you have selected any one of option 2. Refund of Payment Collection
+      
+      1. Video for Refund of Payment Collection 		 		
+      2. Go back to the main menu
+
+
+
+  utter_ask_2nd_layer_en_Token_Service:
+  - text: |-
+        you have selected service 9. Etoken Services		
+
+        1. Video for E token Service		
+        2. Go back to the main menu		
+
+
+  utter_ask_2nd_layer_en_Online_Index_Correction:
+  - text: |-
+        you have selected service 10. Online Index Correction		
+        
+        1. Document for Online  Index Correction		
+        2. Go back to the main menu		
+
+
+  utter_ask_2nd_layer_en_If_any_further_clarrification_other_queries :
+  - text: |-
+        you have selected option 11. If any further clarrification other queries
+
+        1. Software related queries 
+        2. Control room
+        3. Go back to main menu
+
+
+  utter_ask_2nd_layer_en_If_any_further_clarrification_other_queries_l1_1 :
+  - text: |-
+        you have selected option 1
+        1. For software related queries please contact 18001025174
+        
+
+
+  utter_ask_2nd_layer_en_If_any_further_clarrification_other_queries_l1_2 :
+  - text: |-
+        you have selected option 2
+        1. For any other queries/clarification please contact 
+            1. 9498452110 
+            2. 9498452120 
+            3. 9498452130
+
+
+
+
+
+  utter_main_layer_tn:
+  - text: |
+        வணக்கம்								
+        நான் ரெஜினெட், உங்களின் தனிப்பட்ட உதவியாளன் 								
+        பதிவுத்துறை வழங்கும் பின்வரும் சேவைகளில் நான் உங்களுக்கு உதவ முடியும்.								
+        
+        1. ஆவணப்பதிவு								
+        2. வில்லங்கச் சான்றிதழ்								
+        3. வில்லங்கச் சான்றிதழ் பார்வையிடுதல்								
+        4. சான்றிட்ட நகல்								
+        5. திருமணப் பதிவு								
+        6. கூட்டாண்மை நிறுவனங்களின் பதிவு								
+        7. சங்கங்களின் பதிவு								
+        8.கட்டண  சேவை மற்றும்   கட்டணத்  திருப்பு தொகை								
+        9.அடையாள வில்லை பார்வையீடுதல்								
+        10.அட்டவணை திருத்தம்								
+        11.  மேலும் விவரங்கள் தேவைப்படின்/இதர கோரிக்கைகள்								
+        12. முதன்மை பக்கத்திற்கு செல்லவும்.								
+        முன்னோக்கி நகர்த்துவதற்கான விருப்பத்தைத் தேர்ந்தெடுக்கவும். எடுத்துக்காட்டு பதில் 1 - ஆவணப் பதிவு 								
+
+
+
+
+  utter_ask_2nd_layer_tn_Document_Registration:
+  - text: |
+        நீங்கள் 1. ஆவணப்  பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+        1. அலுவலக எல்லை வரையறையை தெரிந்துகொள்ள									
+        2. வழிகாட்டி மதிப்பினை தெரிந்துகொள்ள									
+        3. பயனர் பதிவு									
+        4. வரைவு ஆவணம் மாதிரிகள் 									
+        5. ஆவணம் உருவாக்குதல்									
+        6. முத்திரைத் தீர்வை மற்றும் பதிவுக் கட்டணம்									
+        7. இணைய வழி அட்டவணை திருத்தம்									
+        8. முதன்மை மெனுவிற்கு திரும்பவும்									
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l1_1:
+  - text: | 
+        நீங்கள் 1-அலுவலக எல்லை வரையறையை  தேர்ந்தெடுத்துள்ளீர்கள்					    
+        https://tnreginet.gov.in/portal/					
+
+  utter_ask_2nd_layer_tn_Document_Registration_l1_2:
+  - text: | 
+        நீங்கள் 2- வழிகாட்டி மதிப்பினை  தேர்ந்தெடுத்துள்ளீர்கள்					   
+        https://tnreginet.gov.in/portal/					
+
+  utter_ask_2nd_layer_tn_Document_Registration_l1_3:
+  - text: | 
+        நீங்கள் 3- பயனர் பதிவை தேர்ந்தெடுத்துள்ளீர்கள்								
+
+        1. பயனர் பதிவுக்கான  நடைமுறை ஆவணம்								
+        2. பயனர் பதிவுக்கான வீடியோ பதிவு								
+        3. முதன்மை மெனுவிற்கு திரும்பவும்								
+
+  utter_ask_2nd_layer_tn_Document_Registration_l1_4:
+  - text: | 
+        நீங்கள் 4-ஐ தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. விற்பனை ஆவணம்								
+        2. செட்டில்மெண்ட் ஆவணம்								
+        3. பாகப்பிரிவினை ஆவணம்								
+        4. விடுதலை ஆவணம்								
+        5. பொது அதிகார ஆவணம்								
+        6. கட்டுமான உடன்படிக்கை ஆவணம்								
+        7.  சுவாதீனமில்லாத மேல் அடைமான   ஆவணம்								
+        8. ரசீது ஆவணம்															
+        9. உயில் ஆவணம்								
+        10. பொது அதிகார  இரத்து ஆவணம்								
+        11. பிழைத்திருத்தல் ஆவணம்								
+        12. அறக்கட்டளை ஆவணம்								
+        13. தத்து ஆவணம்								
+        14. உரிமை ஆவணங்கள் ஒப்படைப்பு ஆவணம்								
+        15. குத்தகை ஆவணம்								
+        16.ஒத்தி / சுவாதீனத்துடன் கூடிய ஆவண								
+        17. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l1_5:
+  - text: | 
+        நீங்கள் 4-ஆவணம் உருவாக்குத தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. ஆவணம் உருவாக்குதலுக்கான நடைமுறை 								
+        2. ஆவணம் உருவாக்குதலுக்கான வீடியோ பதிவு								
+        3. முதன்மை மெனுவிற்கு திரும்பவும்								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l1_6:
+  - text: | 
+        நீங்கள் 6- முத்திரைத் தீர்வை மற்றும் பதிவுக் கட்டணத்தினை தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1.முத்திரைத் தீர்வை மற்றும் பதிவுக் கட்டணத்தின்  ஆவணம்								
+        2 முதன்மை மெனுவிற்கு திரும்பவும்								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l1_7:
+  - text: | 
+        நீங்கள் 7- அட்டவணை திருத்தினை தேர்ந்தெடுத்துள்ளீர்கள் 								
+        
+        1.அட்டவணை திருத்தினை உருவாக்குதலுக்கான நடைமுறை ஆவணம்																
+        2.முதன்மை மெனுவிற்கு திரும்பவும்								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_1:
+  - text: | 
+        நீங்கள் 1. விற்பனை ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1.விற்பனை ஆவண மாதிரி வரைவு								
+        2.முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_2:
+  - text: | 
+        நீங்கள் 2. செட்டில்மெண்ட் ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1.செட்டில்மெண்ட் ஆவண மாதிரி வரைவு								
+        2.முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_3:
+  - text: | 
+        நீங்கள்  3. பாகப்பிரிவினை ஆவணம்  தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1.பாகப்பிரிவினை ஆவண மாதிரி வரைவு		
+        2.முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_4:
+  - text: | 
+        நீங்கள் 4. விடுதலை ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1.விடுதலை ஆவண மாதிரி வரைவு								
+        2.முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_5:
+  - text: | 
+        நீங்கள் 5. பொது அதிகார ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. பொது அதிகார  ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_6:
+  - text: | 
+        நீங்கள்  6. கட்டுமான உடன்படிக்கை ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. கட்டுமான உடன்படிக்கை ஆவணம் மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_7:
+  - text: | 
+        நீங்கள் 7. சுவாதீனமில்லாத மேல் அடைமான ஆவணம் ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. சுவாதீனமில்லாத மேல் அடைமான  ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_8:
+  - text: | 
+        நீங்கள் 8. ரசீது ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        1. ரசீது  ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_9:
+  - text: | 
+        நீங்கள் 9. உயில் ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. உயில் ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_10:
+  - text: | 
+        நீங்கள் 10. பொது அதிகார இரத்து ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        1. பொது அதிகார இரத்து ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_11:
+  - text: | 
+        நீங்கள் 11. பிழைத்திருத்தல் ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        1. பிழைத்திருத்தல் ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_12:
+  - text: | 
+        நீங்கள் 12. அறக்கட்டளை ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. அறக்கட்டளை ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_13:
+  - text: | 
+        நீங்கள் 13. தத்து ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1.  தத்து ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_14:
+  - text: | 
+        நீங்கள் 14. உரிமை ஆவணங்கள் ஒப்படைப்பு ஆவணம்  தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. உரிமை ஆவணங்கள் ஒப்படைப்பு ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_15:
+  - text: | 
+        நீங்கள் 15. குத்தகை ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. குத்தகை ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+  utter_ask_2nd_layer_tn_Document_Registration_l2_16:
+  - text: | 
+        நீங்கள் 16. ஒத்தி / சுவாதீனத்துடன் கூடிய அடைமான ஆவணம் தேர்ந்தெடுத்துள்ளீர்கள்								
+        
+        1. ஒத்தி / சுவாதீனத்துடன் கூடிய ஆவண மாதிரி வரைவு								
+        2. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+
+
+
+
+  utter_ask_2nd_layer_tn_Encumbrance_Certificate:
+  - text: |-
+      நீங்கள் 2-ஐ(வில்லங்கச் சான்றிதழ்) தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. பயனர் பதிவு								
+      2. வில்லங்க சான்றிதழ் விண்ணப்பிக்க 								
+      3. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+      
+
+  utter_ask_2nd_layer_tn_Encumbrance_Certificate_l1_1:
+  - text: |-
+
+      நீங்கள் 1-பயனர் பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. பயனர் பதிவுக்கான  நடைமுறை ஆவணம்								
+      2. பயனர் பதிவுக்கானவீடியோ பதிவு								
+      3. முதன்மை மெனுவிற்கு திரும்பவும்								
+     
+
+
+  utter_ask_2nd_layer_tn_Encumbrance_Certificate_l1_2:
+  - text: |-
+
+      நீங்கள் 2-வில்லங்க சான்றிதழ் விண்ணப்பிப்பதற்கான பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. வில்லங்க சான்றிதழ் விண்ணப்பிப்பதற்கான  நடைமுறை ஆவணம்								
+      2. வில்லங்க சான்றிதழ் விண்ணப்பிப்பதற்கான வீடியோ பதிவு 								
+      3. முதன்மை மெனுவிற்கு திரும்பவும்								
+      
+
+  utter_ask_2nd_layer_tn_View_Encumbrance_Certificate:
+  - text: |-
+        நீங்கள் சேவை 3- வில்லங்கசான்றினை பார்வையிடுதல் தேர்ந்தெடுத்துள்ளீர்கள் 
+        
+        1. வில்லங்கசான்றினை பார்வையிடுதல்  காணொளி பதிவு
+        2. முதன்மை பக்கத்திற்க்கு செல்லவும். 
+
+
+
+  utter_ask_2nd_layer_tn_certified_copy:
+  - text: |-
+      நீங்கள் 4-சான்றிட்ட நகல் தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. பயனர் பதிவு								
+      2. சான்றிட்ட நகல் விண்ணப்பிக்க 								
+      3. முதன்மை பக்கத்திற்கு திரும்பவும்.								
+      
+
+  utter_ask_2nd_layer_tn_certified_copy_l1_1:
+  - text: |-
+      நீங்கள் 1-பயனர் பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. பயனர் பதிவுக்கான  நடைமுறை ஆவணம்								
+      2. பயனர் பதிவுக்கானவீடியோ பதிவு								
+      3. முதன்மை மெனுவிற்கு திரும்பவும்								
+      
+
+
+
+  utter_ask_2nd_layer_tn_certified_copy_l1_2:
+  - text: |-
+      நீங்கள் 2-சான்றிட்ட நகல் விண்ணப்பிக்க  தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. சான்றிட்ட நகல் விண்ணப்பிப்பதற்கான  நடைமுறை ஆவணம்								
+      2. சான்றிட்ட நகல் விண்ணப்பிப்பதற்கான வீடியோ பதிவு 								
+      3. முதன்மை மெனுவிற்கு திரும்பவும்								
+      
+
+
+  utter_ask_2nd_layer_tn_Marriage_Registration:
+  - text: |-
+      நீங்கள் 5 ஐ(திருமணப் பதிவு) தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. திருமணப் பதிவு	
+      2. திருமணச் சான்றிதழின் சான்றிட்ட நகல்	
+      3. இணையவழி திருத்தம்	
+      4. முதன்மை பக்கத்திற்கு மீண்டும் செல்ல 	
+      
+
+  utter_ask_2nd_layer_tn_Marriage_Registration_l1_1:
+  - text: |-
+
+      1. இந்து திருமண பதிவு
+      2. தமிழ்நாடு திருமணப் பதிவு
+      3. சிறப்பு திருமண பதிவு
+      4. கிறிஸ்தவ திருமண பதிவு
+      5. முதன்மை மெனுவிற்கு திரும்பவும்
+      
+
+
+  utter_ask_2nd_layer_tn_Marriage_Registration_l1_2:
+  - text: |-
+        1. பயனர் பதிவுக்கான நடைமுறை ஆவணம்	
+        2. பயனர் பதிவுக்கான வீடியோ  பதிவு	
+        3. இந்து திருமண பதிவு நகலை விண்ணப்பிப்பதற்கான நடைமுறை ஆவணம்	
+        4. தமிழ்நாடு திருமணப் பதிவு நகலை விண்ணப்பிப்பதற்கான நடைமுறை ஆவணம்	
+        5. சிறப்பு திருமண பதிவு நகலை விண்ணப்பிப்பதற்கான நடைமுறை ஆவணம்	
+        6. கிறிஸ்தவ திருமண பதிவு நகலை விண்ணப்பிப்பதற்கான நடைமுறை ஆவணம்	
+        7. நகலைப் விண்ணப்பிப்பதற்கான  வீடியோ பதிவு	
+        8. முதன்மை மெனுவிற்கு திரும்பவும்	
+      
+
+
+  utter_ask_2nd_layer_tn_Marriage_Registration_l1_3:
+  - text: |-
+      1. பயனர் பதிவுக்கான  நடைமுறை ஆவணம்						
+      2. பயனர் பதிவுக்கான வீடியோ பதிவு						
+      3. இந்து திருமண பதிவு ஆன்லைன் திருத்தத்திற்கான  செயல்முறை ஆவணம்						
+      4. தமிழ்நாடு திருமணப் பதிவுபதிவு ஆன்லைன் திருத்தத்திற்கான  செயல்முறை ஆவணம்
+      5. சிறப்பு திருமணத் திருத்தத்திற்கான படி வாரியான நடைமுறை ஆவணம்						
+      6. கிறிஸ்தவ திருமண பதிவு ஆன்லைன் திருத்தத்திற்கான  செயல்முறை ஆவணம்						
+      7. ஆன்லைன் திருத்தத்திற்கான வீடியோ						
+      8. முதன்மை மெனுவிற்கு திரும்பவும்						
+      						
+      
+  utter_ask_2nd_layer_tn_Marriage_Registration_l2_1:
+  - text: |-
+      இந்து திருமண பதிவுக்கு வரவேற்கிறோம்
+
+      1. பயனர் பதிவுக்கான நடைமுறை ஆவணம்		
+      2. பயனர் பதிவுக்கான வீடியோ  பதிவு		
+      3. இந்து திருமணப் பதிவுக்கான நடைமுறை ஆவணம்		
+      4. இந்து திருமணப் பதிவுக்கான வீடியோ		
+      5. முதன்மை மெனுவிற்கு திரும்பவும்		
+     
+
+  utter_ask_2nd_layer_tn_Marriage_Registration_l2_2:
+  - text: |-
+      தமிழ்நாடு திருமணப் பதிவுக்கு வரவேற்கிறோம்
+
+      1. பயனர் பதிவுக்கான நடைமுறை ஆவணம்		
+      2. பயனர் பதிவுக்கான வீடியோ  பதிவு		
+      3. தமிழ்நாடு திருமணப் பதிவுக்கான  நடைமுறை ஆவணம்		
+      4. தமிழ்நாடு திருமணப் பதிவுக்கான வீடியோ		
+      5. முதன்மை மெனுவிற்கு திரும்பவும்		
+      
+
+
+  utter_ask_2nd_layer_tn_Marriage_Registration_l2_3:
+  - text: |-
+      சிறப்பு திருமண பதிவுக்கு வரவேற்கிறோம்
+
+      1. பயனர் பதிவுக்கான நடைமுறை ஆவணம்		
+      2. பயனர் பதிவுக்கான வீடியோ பதிவு		
+      3. சிறப்பு திருமணப் பதிவுக்கான நடைமுறை ஆவணம்		
+      4. சிறப்பு திருமணப் பதிவுக்கான  வீடியோ		
+      5. முதன்மை மெனுவிற்கு திரும்பவும்		
+      
+
+  utter_ask_2nd_layer_tn_Marriage_Registration_l2_4:
+  - text: |-
+      கிறிஸ்தவ திருமண பதிவுக்கு வரவேற்கிறோம்
+
+      1. பயனர் பதிவுக்கான நடைமுறை ஆவணம்			
+      2. பயனர் பதிவுக்கான வீடியோ பதிவு			
+      3. கிறிஸ்துவ திருமண பதிவுக்கான நடைமுறை ஆவணம்						
+      4. முதன்மை மெனுவிற்கு திரும்பவும்			
+      
+
+  utter_ask_2nd_layer_tn_Firm_Registration:
+  - text: |-
+      நீங்கள் 6-ஐ(கூட்டாண்மை நிறுவனங்களின் பதிவு) தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. கூட்டாண்மை நிறுவனங்களின் பதிவு			
+      2. வருடாந்திர கோர்வை			
+      3. கூட்டாண்மை நிறுவனங்களின் பெயர் மற்றும் இடம் மாற்றம்			
+      4. கூட்டாண்மை நிறுவனங்களின் சான்றிட்ட நகல்			
+      5. கூட்டாண்மை நிறுவனங்களின் கிளை மாற்றம்			
+      6. கூட்டாண்மை நிறுவனங்களின் கலைப்பு			
+      7. கூட்டாண்மை நிறுவனங்களின பங்குதாரர்கள் மாற்றம்			
+      8. முதன்மை பக்கத்திற்கு திரும்பவும்.			
+      
+
+  utter_ask_2nd_layer_tn_Firm_Registration_l1_1:
+  - text: |-
+      நீங்கள் 1-கூட்டாண்மை நிறுவனங்களின் பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. கூட்டாண்மை நிறுவனங்களின் பதிவுக்கான நடைமுறை ஆவணம்				
+      2. கூட்டாண்மை நிறுவனங்களின் பதிவக்கான வீடியோ				
+      3. முதன்மை பக்கத்திற்கு திரும்பவும்.				
+      
+
+  utter_ask_2nd_layer_tn_Firm_Registration_l1_2:
+  - text: |-
+      நீங்கள் 2-வருடாந்திர கோர்வை பதிவை  தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. கூட்டாண்மை நிறுவனங்களின் வருடாந்திர கோர்வை நடைமுறை ஆவணம்
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்.
+      
+
+  utter_ask_2nd_layer_tn_Firm_Registration_l1_3:
+  - text: |-
+      நீங்கள் 3.கூட்டாண்மை நிறுவனங்களின் பெயர் மற்றும் இட மாற்ற பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. கூட்டாண்மை நிறுவனங்களின் பெயர் மற்றும் இட மாற்றத்திற்கான நடைமுறை ஆவணம் 								
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்.				
+      
+
+  utter_ask_2nd_layer_tn_Firm_Registration_l1_4:
+  - text: |-
+      நீங்கள் 4.கூட்டாண்மை நிறுவனங்களின் சான்றிட்ட நகலை பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. கூட்டாண்மை நிறுவனங்களின் சான்றிட்ட நகலுக்கான நடைமுறை ஆவணம் 														
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்.							
+      
+
+  utter_ask_2nd_layer_tn_Firm_Registration_l1_5:
+  - text: |-
+      நீங்கள் 5-.கூட்டாண்மை நிறுவனங்களின் கிளை மாற்ற  தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. கூட்டாண்மை நிறுவனங்களின் கிளை மாற்றத்திற்கான  நடைமுறை ஆவணம்						
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்.				
+      
+
+  utter_ask_2nd_layer_tn_Firm_Registration_l1_6:
+  - text: |-
+      நீங்கள் 6-கூட்டாண்மை நிறுவனங்களின் கலைப்பு பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. கூட்டாண்மை நிறுவனங்களின் கலைப்புக்கான  நடைமுறை ஆவணம்						
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்.				
+      
+
+  utter_ask_2nd_layer_tn_Firm_Registration_l1_7:
+  - text: |-
+      நீங்கள் 7-கூட்டாண்மை நிறுவனங்களின் பங்குதாரர் மாற்ற  பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. கூட்டாண்மை நிறுவனங்களின் பங்குதாரர் மாற்றத்திற்கான  நடைமுறை ஆவணம்							
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்.		
+      
+
+  utter_ask_2nd_layer_tn_society_Registration:
+  - text: |-
+      நீங்கள் 7-ஐ தேர்ந்தெடுத்துள்ளீர்கள்
+      				
+      1. சங்கங்களின் பதிவு				
+      2. சங்கங்களின் வருடாந்திர கோர்வை				
+      3. சங்கங்களின் பெயர் மாற்றம்				
+      4. சங்கப் பதிவின் கீழ் மேல்முறையீடு				
+      5. சங்க உறுப்பினர்களின் மாற்றம்				
+      6. முதன்மை பக்கத்திற்கு திரும்பவும்.				
+      
+
+  utter_ask_2nd_layer_tn_society_Registration_l1_1:
+  - text: |-
+      நீங்கள் 1-சங்கப் பதிவை  தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. சங்கப் பதிவிற்கான நடைமுறை ஆவணம்				
+      2. சங்கப் பதிவிற்கான வீடியோ பதிவு				
+      3. முதன்மை பக்கத்திற்கு திரும்பவும்.
+
+  utter_ask_2nd_layer_tn_society_Registration_l1_2:
+  - text: |-
+      நீங்கள் 2-சங்கங்களின் வருடாந்திர கோர்வை பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. சங்கங்களின் வருடாந்திர கோர்வைக்கான நடைமுறை ஆவணம்					
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்.					
+
+  utter_ask_2nd_layer_tn_society_Registration_l1_3:
+  - text: |-
+      நீங்கள் 3-சங்கங்களின் பெயர் மாற்ற பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. சங்கங்களின் பெயர் மாற்றத்திற்கான நடைமுறை ஆவணம்					
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்		
+
+
+  utter_ask_2nd_layer_tn_society_Registration_l1_4:
+  - text: |-
+      நீங்கள் 4- சங்க பதிவின் கீழ் மேல்முறையீட்டிற்கான  பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. சங்க பதிவின் கீழ் மேல்முறையீட்டிற்கான நடைமுறை ஆவணம்		
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்	
+
+  utter_ask_2nd_layer_tn_society_Registration_l1_5:
+  - text: |-
+      நீங்கள் 5- சங்க உறுப்பினர்களின் மாற்றத்திற்கான பதிவை தேர்ந்தெடுத்துள்ளீர்கள்
+
+      1. சங்க உறுப்பினர்களின் மாற்றத்திற்கான நடைமுறை ஆவணம்
+      2. முதன்மை பக்கத்திற்கு திரும்பவும்
+
+
+  utter_ask_2nd_layer_tn_Payment_and_refund_of_payment:
+  - text: |-
+      8 நீங்கள்  கட்டண சேவை தேர்ந்தெடுத்துள்ளீர்கள்				
+
+      1. கட்டணம் செலுத்துதல்				
+      2. கட்டணத்  திருப்பு தொகை 								
+      3. முதன்மை பக்கத்திற்க்கு திரும்பவும்				
+
+
+
+  utter_ask_2nd_layer_tn_Payment_and_refund_of_payment_l1_1:
+  - text: |-
+      1. நீங்கள் கட்டணம் செலுத்துதல் சேவை தேர்ந்தெடுத்துள்ளீர்கள்						
+
+      1. கட்டண சேவைக்கான வீடியோ பதிவு						
+      2. முதன்மை பக்கத்திற்க்கு திரும்பவும்						
+
+
+
+  utter_ask_2nd_layer_tn_Payment_and_refund_of_payment_l1_2:
+  - text: |-
+      2. நீங்கள் கட்டணத் திருப்பு தொகை தேர்ந்தெடுத்துள்ளீர்கள்					
+      
+      1. கட்டணத் திருப்புத் தொகைக்கான வீடியோ பதிவு					
+      2. முதன்மை பக்கத்திற்க்கு திரும்பவும் 					
+
+
+  utter_ask_2nd_layer_tn_Token_Service:
+  - text: |-
+        நீங்கள் சேவை 9. அடையாள வில்லை பார்வையீடுதல் தேர்ந்தெடுத்துள்ளீர்கள்
+        
+        1. அடையாள வில்லை பரர்வையீடுதலுக்கான காணொளி பதிவு
+        2. முதன்மை பக்கத்திற்க்கு செல்லவும். 
+
+
+  utter_ask_2nd_layer_tn_Online_Index_Correction:
+  - text: |-
+        நீங்கள் சேவை 10- அட்டவணை திருத்தினை தேர்ந்தெடுத்துள்ளீர்கள் 
+        
+        1. அட்டவணை திருத்தினை உருவாக்குதலுக்கான நடைமுறை ஆவணம்
+        2. முதன்மை பக்கத்திற்க்கு செல்லவும். 
+
+
+  utter_ask_2nd_layer_tn_If_any_further_clarrification_other_queries :
+  - text: |-
+        நீங்கள் 11-விவரங்கள் தேவைப்படின்/இதர கோரிக்கைகளை தேர்ந்தெடுத்துள்ளீர்கள்
+
+        1. மென்பொருள் தொடர்பான சந்தேங்களுக்கு 				
+        2. கட்டுப்பாட்டு அறை 				
+        3. முதன்மை பக்கத்திற்கு திரும்பவும்.				
+
+
+  utter_ask_2nd_layer_tn_If_any_further_clarrification_other_queries_l1_1 :
+  - text: |-
+        நீங்கள்  1. மென்பொருள் தொடர்பான சந்தேங்களை    தேர்ந்தெடுத்துள்ளீர்கள்
+
+        1. மென்பொருள் தொடர்பான சந்தேங்களுக்கு  தொடர்புக்கு  18001025174					
+        
+
+
+  utter_ask_2nd_layer_tn_If_any_further_clarrification_other_queries_l1_2 :
+  - text: |-
+        நீங்கள் 2-இதர கோரிக்கைளை  தேர்ந்தெடுத்துள்ளீர்கள்
+        					
+        1. மேலும் விவரங்கள் தேவைப்படின்/இதர கோரிக்கைகள்  கட்டுப்பாட்டு அறை எண் . 
+            1. 9498452110 
+            2. 9498452120 
+            3. 9498452130					
+        					
+
+
+
+  utter_submit:
+  - condition:
+         - type: slot
+           name: choices_1
+           value: "2"
+    text: |-
+      Thank you for using service of Unified Information Centre of the Tamil Nadu Registration Department..
+      For any other queries/clarification please contact 
+            1. 9498452110 
+            2. 9498452120 
+            3. 9498452130
+  - condition:
+         - type: slot
+           name: choices_1
+           value: "1"
+    text: |-
+      தமிழ்நாடு பதிவுத் துறையின் ஒருங்கிணைந்த தகவல் மையத்தின் சேவையைப் பயன்படுத்தியதற்கு நன்றி..
+      மேலும் விவரங்கள் தேவைப்படின்/இதர கோரிக்கைகள்  கட்டுப்பாட்டு அறை எண் . 
+            1. 9498452110 
+            2. 9498452120 
+            3. 9498452130
+
+
+  utter_ask_start_valid_responce:
+  - text: |-
+        Please give valid input.Type "Hi" to start chat
+        சரியான உள்ளீட்டை வழங்கவும்.உரையாடல் தொடங்க "Hi" என உள்ளிடவும் 
+  
+  utter_ask_valid_responce:
+  - condition:
+         - type: slot
+           name: choices_1
+           value: "2"
+    text: |-
+      Please give valid input
+  - condition:
+         - type: slot
+           name: choices_1
+           value: "1"
+    text: |-
+      சரியான உள்ளீட்டை வழங்கவும்
+
+
+  - text: |-
+        Please give valid input.
+        சரியான உள்ளீட்டை வழங்கவும்.
+
+  utter_ask_lang_valid_responce:
+  - text: |-
+      Please give valid input
+      சரியான உள்ளீட்டை வழங்கவும்
+
+
+
+actions:
+- action_reset_loop
+- utter_submit
+- validate_bot_form_1
+- action_check_input_validity
+
+session_config:
+  session_expiration_time: 10
+  carry_over_slots_to_new_session: false

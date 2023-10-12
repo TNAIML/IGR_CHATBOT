@@ -1,0 +1,51 @@
+version: "3.1"
+nlu:
+- intent: first_layer
+  examples: |
+    - hey
+    - hello
+    - hi
+- intent: selection_1
+  examples: |
+    - [1](options)
+    - [2](options)
+    - [3](options)
+    - [4](options)
+    - [5](options)
+    - [!](options)
+    - [#](options)
+    - [21](options)
+    - [30](options)
+    - [11](options)
+    - [15](options)
+    - [20](options)
+    - [25](options)
+    - [3](options)
+    - [2](options)
+    - [99](options)
+
+
+- intent: selection_2
+  examples: |
+    - [asfa](alphanum)
+    - [as113e](alphanum)
+    - [ckdvbk2313](alphanum)
+    - [a111](alphanum)
+    - [qwerqr23](alphanum)
+    - [xcbxnm](alphanum)
+    - [12jwej](alphanum)
+    - [1whv](alphanum)
+    - [2n](alphanum)
+    - [3ksdm](alphanum)
+    - [a](alphanum)
+    - [qwe](alphanum)
+    - [wr](alphanum)
+    - [tu](alphanum)
+    - [xk](alphanum)
+    - [fg](alphanum)
+    - [sfi](alphanum)
+    - [sdm](alphanum)
+    - [ksd](alphanum)
+    - [q](alphanum)
+    - [r](alphanum)
+    - [b](alphanum)
