@@ -91,10 +91,12 @@ responses:
         10. Online Index Correction
         11. Online Registration
         12. If any further clarification/other queries 
-        13. Go Back to main menu
+        13. Go Back to language selection
         Please select your required service from options above to move ahead.Example Reply 1 for Document Registration
 
-
+  utter_ask_2nd_layer_en_Document_Registration_go_back:
+  - text: |
+        1. get lost bruh🥳 
 
   utter_ask_2nd_layer_en_Document_Registration:
   - text: |

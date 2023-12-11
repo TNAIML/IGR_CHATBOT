@@ -431,6 +431,7 @@ class ValidateBotForm(FormValidationAction):
         global w
         global x
         global y
+        global z
 
 
         if (v == 'English'):
@@ -439,7 +440,7 @@ class ValidateBotForm(FormValidationAction):
             
                 if third_selection_dc == '1':
                     dispatcher.utter_message(response ='utter_ask_2nd_layer_en_Document_Registration_l1_1' )
-                    x = 'utter_ask_2nd_layer_en_Document_Registration_l1_1'
+                    x = 'utter_ask_2nd_layer_en_Document_Registration_go_back'
                     y = 'third_layer'
                     time.sleep(3)
                 elif third_selection_dc == '2':
@@ -469,7 +470,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_en_Document_Registration_l1_7'
                     time.sleep(3)
                 elif  third_selection_dc == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
+                    # dispatcher.utter_message(response ='utter_lang_selection' )
+                    dispatcher.utter_message(response ='utter_main_layer_en' )
                     return {"choices_1": None,"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
@@ -1851,6 +1853,10 @@ class ValidateBotForm(FormValidationAction):
 
 
 
+       # The above code is a Python if-else statement. It checks if the value of the variable `y` is
+       # equal to the string `'last_layer'`. If it is, it returns a dictionary with the key
+       # `"requested_slot"` set to the string `"choices_5"`. If `y` is not equal to `'last_layer'`, it
+       # returns a dictionary with the key `"requested_slot"` set to `None`.
         if y == 'last_layer':
             return {"requested_slot": "choices_5" }
         else:
