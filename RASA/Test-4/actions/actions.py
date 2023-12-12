@@ -440,7 +440,7 @@ class ValidateBotForm(FormValidationAction):
             
                 if third_selection_dc == '1':
                     dispatcher.utter_message(response ='utter_ask_2nd_layer_en_Document_Registration_l1_1' )
-                    x = 'utter_ask_2nd_layer_en_Document_Registration_go_back'
+                    x = 'utter_ask_2nd_layer_en_Document_Registration_l1_1'
                     y = 'third_layer'
                     time.sleep(3)
                 elif third_selection_dc == '2':
@@ -469,10 +469,14 @@ class ValidateBotForm(FormValidationAction):
                     dispatcher.utter_message(response ='utter_ask_2nd_layer_en_Document_Registration_l1_7' )
                     x = 'utter_ask_2nd_layer_en_Document_Registration_l1_7'
                     time.sleep(3)
+                    # dispatcher.utter_message(response ='utter_lang_selection')
+                
                 elif  third_selection_dc == 'Go_back':
-                    # dispatcher.utter_message(response ='utter_lang_selection' )
-                    dispatcher.utter_message(response ='utter_main_layer_en' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_en')
+                    return {"choices_2": None, "choices_3": None}
+
+
+                    # return {"choices_1": None,"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -487,6 +491,7 @@ class ValidateBotForm(FormValidationAction):
                     dispatcher.utter_message(response ='utter_ask_2nd_layer_en_Encumbrance_Certificate_l1_2' )
                     x = 'utter_ask_2nd_layer_en_Encumbrance_Certificate_l1_2'
                     time.sleep(3)
+# 
                 elif  third_selection_ec == 'Go_back':
                     dispatcher.utter_message(response ='utter_lang_selection' )
                     return {"choices_1": None,"choices_2": None, "choices_3": None}
