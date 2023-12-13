@@ -230,7 +230,7 @@ class ValidateBotForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `choices_1` value."""
 
-
+ 
         global v
         global y
         global w 
@@ -330,7 +330,7 @@ class ValidateBotForm(FormValidationAction):
                 dispatcher.utter_message(response = "utter_ask_2nd_layer_en_If_any_further_clarrification_other_queries")
             elif main_selection_en == 'Go_Back':
                 dispatcher.utter_message(response = "utter_lang_selection")
-                return {"choices_2": None , "choices_1": None}
+                return {"choices_1": None ,"choices_2": None , "choices_1": None}
             # tn_Online_Registration_1
             elif main_selection_en not in list(Main_layer_en.values()):
                 dispatcher.utter_message(response = "utter_ask_valid_responce")
@@ -361,19 +361,23 @@ class ValidateBotForm(FormValidationAction):
             elif main_selection_tn == 'society_Registration':
                 w = 'society_Registration'
                 dispatcher.utter_message(response = "utter_ask_2nd_layer_tn_society_Registration")
-            elif main_selection_en == 'Payment_Refund_Service':
+            #issue fixed
+            elif main_selection_tn == 'Payment_Refund_Service':
                 w = 'Payment_Refund_Service'
-                dispatcher.utter_message(response = "utter_ask_2nd_layer_en_Payment_and_Refund_of_payment")
-            elif main_selection_en == 'Token_Service':
+                #Working 
+                # dispatcher.utter_message(response = "utter_ask_2nd_layer_tamil_Payment_and_Refund_of_payment")
+                dispatcher.utter_message(response = "utter_ask_2nd_layer_tn_Payment_and_refund_of_payment")
+                print(main_selection_tn)
+            elif main_selection_tn == 'Token_Service':
                 w = 'Token_Service'
                 y = 'third_layer'
-                dispatcher.utter_message(response = "utter_ask_2nd_layer_en_Token_Service")
-            elif main_selection_en == 'Online_Index_Correction':
+                dispatcher.utter_message(response = "utter_ask_2nd_layer_tn_Token_Service")
+            elif main_selection_tn == 'Online_Index_Correction':
                 w = 'Online_Index_Correction'
                 y = 'third_layer'
-                dispatcher.utter_message(response = "utter_ask_2nd_layer_en_Online_Index_Correction")
-            elif main_selection_en == 'Online_Registration':
-                w = 'tn_Online_Registration'
+                dispatcher.utter_message(response = "utter_ask_2nd_layer_tn_Online_Index_Correction")
+            elif main_selection_tn == 'Online_Registration':
+                w = 'Online_Registration'
                 y = 'third_layer'
                 dispatcher.utter_message(response = "utter_ask_2nd_layer_tn_Online_Registration")
             elif main_selection_tn == 'further_clarrification_other_queries':
@@ -431,6 +435,7 @@ class ValidateBotForm(FormValidationAction):
         global w
         global x
         global y
+        global z
 
 
         if (v == 'English'):
@@ -468,9 +473,12 @@ class ValidateBotForm(FormValidationAction):
                     dispatcher.utter_message(response ='utter_ask_2nd_layer_en_Document_Registration_l1_7' )
                     x = 'utter_ask_2nd_layer_en_Document_Registration_l1_7'
                     time.sleep(3)
+                    # dispatcher.utter_message(response ='utter_lang_selection')
+                
                 elif  third_selection_dc == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_en')
+                    return {"choices_2": None, "choices_3": None}
+                    # return {"choices_1": None,"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -485,9 +493,10 @@ class ValidateBotForm(FormValidationAction):
                     dispatcher.utter_message(response ='utter_ask_2nd_layer_en_Encumbrance_Certificate_l1_2' )
                     x = 'utter_ask_2nd_layer_en_Encumbrance_Certificate_l1_2'
                     time.sleep(3)
+# 
                 elif  third_selection_ec == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_en' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -496,8 +505,8 @@ class ValidateBotForm(FormValidationAction):
             elif w == 'View_Encumbrance_Certificate':       
                 if slot_3 in list(View_Encumbrance_Certificate.keys()):
                     if slot_3 == '2':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None}
+                        dispatcher.utter_message(response = 'utter_main_layer_en' )
+                        return {"choices_2": None,"choices_3": None}
                     else:
                         dispatcher.utter_message(text = third_selection_vec)
                         time.sleep(3)
@@ -517,8 +526,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_en_certified_copy_l1_2'
                     time.sleep(3)
                 elif  third_selection_cc == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_en' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -539,8 +548,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_en_Marriage_Registration_l1_3'
                     time.sleep(3)
                 elif  third_selection_mr == 'Go_back':
-                    dispatcher.utter_message(response = 'utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response = 'utter_main_layer_en' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -576,8 +585,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_en_Firm_Registration_l1_7'
                     time.sleep(3)
                 elif third_selection_fr == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_en' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -606,8 +615,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_en_society_Registration_l1_5'
                     time.sleep(3)
                 elif  third_selection_sr == 'Go_back':
-                    dispatcher.utter_message(response = 'utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response = 'utter_main_layer_en' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -623,8 +632,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_en_Payment_and_Refund_of_payment_l1_2'
                     time.sleep(3)
                 elif  third_selection_pr == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_en' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -634,8 +643,8 @@ class ValidateBotForm(FormValidationAction):
             elif w == 'Token_Service':
                 if slot_3 in list(Token_Service.keys()):
                     if slot_3 == '2':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None}
+                        dispatcher.utter_message(response = 'utter_main_layer_en' )
+                        return {"choices_2": None,"choices_3": None}
                     else:
                         dispatcher.utter_message(text = third_selection_et)
                         time.sleep(3)
@@ -647,8 +656,8 @@ class ValidateBotForm(FormValidationAction):
             elif w == 'Online_Index_Correction':
                 if slot_3 in list(Online_Index_Correction.keys()):
                     if slot_3 == '2':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None}
+                        dispatcher.utter_message(response = 'utter_main_layer_en' )
+                        return {"choices_2": None,"choices_3": None}
                     else:
                         dispatcher.utter_message(text = third_selection_oic)
                         time.sleep(3)
@@ -660,8 +669,8 @@ class ValidateBotForm(FormValidationAction):
             elif w == 'Online_Registration':
                 if slot_3 in list(Online_Registration.keys()):
                     if slot_3 == '2':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None}
+                        dispatcher.utter_message(response = 'utter_main_layer_en' )
+                        return {"choices_2": None,"choices_3": None}
                     else:
                         dispatcher.utter_message(text = third_selection_or)
                         time.sleep(3)
@@ -679,8 +688,8 @@ class ValidateBotForm(FormValidationAction):
                     dispatcher.utter_message(response = 'utter_ask_2nd_layer_en_If_any_further_clarrification_other_queries_l1_2' )
                     time.sleep(3)
                 elif  third_selection_afc == 'Go_back':
-                    dispatcher.utter_message(response = 'utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response = 'utter_main_layer_en' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -722,8 +731,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_tn_Document_Registration_l1_7'
                     time.sleep(3)
                 elif  tn_third_selection_dc == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_tn' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -739,8 +748,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_tn_Encumbrance_Certificate_l1_2'
                     time.sleep(3)
                 elif  tn_third_selection_ec == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_tn' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -748,8 +757,8 @@ class ValidateBotForm(FormValidationAction):
             elif w == 'View_Encumbrance_Certificate':       
                 if slot_3 in list(tn_View_Encumbrance_Certificate.keys()):
                     if slot_3 == '2':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None}
+                        dispatcher.utter_message(response = 'utter_main_layer_tn' )
+                        return {"choices_2": None,"choices_3": None}
                     else:
                         dispatcher.utter_message(text = tn_third_selection_vec)
                         time.sleep(3)
@@ -768,8 +777,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_tn_certified_copy_l1_2'
                     time.sleep(3)
                 elif  tn_third_selection_cc == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_tn' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -790,8 +799,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_tn_Marriage_Registration_l1_3'
                     time.sleep(3)
                 elif  tn_third_selection_mr == 'Go_back':
-                    dispatcher.utter_message(response = 'utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response = 'utter_main_layer_tn' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -827,8 +836,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_tn_Firm_Registration_l1_7'
                     time.sleep(3)
                 elif third_selection_fr == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_tn' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -855,8 +864,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_tn_society_Registration_l1_5'
                     time.sleep(3)
                 elif  tn_third_selection_sr == 'Go_back':
-                    dispatcher.utter_message(response = 'utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response = 'utter_main_layer_tn' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -872,8 +881,8 @@ class ValidateBotForm(FormValidationAction):
                     x = 'utter_ask_2nd_layer_tn_Payment_and_refund_of_payment_l1_2'
                     time.sleep(3)
                 elif  tn_third_selection_pr == 'Go_back':
-                    dispatcher.utter_message(response ='utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response ='utter_main_layer_tn' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -883,8 +892,8 @@ class ValidateBotForm(FormValidationAction):
             elif w == 'Token_Service':
                 if slot_3 in list(tn_Token_Service.keys()):
                     if slot_3 == '2':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None}
+                        dispatcher.utter_message(response = 'utter_main_layer_tn' )
+                        return {"choices_2": None,"choices_3": None}
                     else:
                         dispatcher.utter_message(text = tn_third_selection_et)
                         time.sleep(3)
@@ -896,8 +905,8 @@ class ValidateBotForm(FormValidationAction):
             elif w == 'Online_Index_Correction':
                 if slot_3 in list(Online_Index_Correction.keys()):
                     if slot_3 == '2':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None}
+                        dispatcher.utter_message(response = 'utter_main_layer_tn' )
+                        return {"choices_2": None,"choices_3": None}
                     else:
                         dispatcher.utter_message(text = tn_third_selection_oic)
                         time.sleep(3)
@@ -910,8 +919,8 @@ class ValidateBotForm(FormValidationAction):
             elif w == 'Online_Registration':
                 if slot_3 in list(tn_Online_Registration_1.keys()):
                     if slot_3 == '2':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None}
+                        dispatcher.utter_message(response = 'utter_main_layer_tn' )
+                        return {"choices_2": None,"choices_3": None}
                     else:
                         dispatcher.utter_message(text = tn_third_selection_or)
                         time.sleep(3)
@@ -928,8 +937,8 @@ class ValidateBotForm(FormValidationAction):
                     dispatcher.utter_message(response = 'utter_ask_2nd_layer_tn_If_any_further_clarrification_other_queries_l1_2' )
                     time.sleep(3)
                 elif  tn_third_selection_afc == 'Go_back':
-                    dispatcher.utter_message(response = 'utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None}
+                    dispatcher.utter_message(response = 'utter_main_layer_tn' )
+                    return {"choices_2": None, "choices_3": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_3": None}
@@ -1851,6 +1860,10 @@ class ValidateBotForm(FormValidationAction):
 
 
 
+       # The above code is a Python if-else statement. It checks if the value of the variable `y` is
+       # equal to the string `'last_layer'`. If it is, it returns a dictionary with the key
+       # `"requested_slot"` set to the string `"choices_5"`. If `y` is not equal to `'last_layer'`, it
+       # returns a dictionary with the key `"requested_slot"` set to `None`.
         if y == 'last_layer':
             return {"requested_slot": "choices_5" }
         else:
