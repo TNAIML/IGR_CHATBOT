@@ -361,10 +361,13 @@ class ValidateBotForm(FormValidationAction):
             elif main_selection_tn == 'society_Registration':
                 w = 'society_Registration'
                 dispatcher.utter_message(response = "utter_ask_2nd_layer_tn_society_Registration")
+            #issue fixed
             elif main_selection_tn == 'Payment_Refund_Service':
                 w = 'Payment_Refund_Service'
-                y = 'third_layer'
-                dispatcher.utter_message(response = "utter_ask_2nd_layer_en_Payment_and_Refund_of_payment")
+                #Working 
+                # dispatcher.utter_message(response = "utter_ask_2nd_layer_tamil_Payment_and_Refund_of_payment")
+                dispatcher.utter_message(response = "utter_ask_2nd_layer_tn_Payment_and_refund_of_payment")
+                print(main_selection_tn)
             elif main_selection_tn == 'Token_Service':
                 w = 'Token_Service'
                 y = 'third_layer'
@@ -374,7 +377,7 @@ class ValidateBotForm(FormValidationAction):
                 y = 'third_layer'
                 dispatcher.utter_message(response = "utter_ask_2nd_layer_tn_Online_Index_Correction")
             elif main_selection_tn == 'Online_Registration':
-                w = 'tn_Online_Registration'
+                w = 'Online_Registration'
                 y = 'third_layer'
                 dispatcher.utter_message(response = "utter_ask_2nd_layer_tn_Online_Registration")
             elif main_selection_tn == 'further_clarrification_other_queries':

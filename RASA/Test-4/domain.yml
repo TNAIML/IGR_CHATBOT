@@ -583,7 +583,6 @@ responses:
       2. Refund of Payment Collection
       3. Go back to the main menu		
 
-
   utter_ask_2nd_layer_en_Payment_and_Refund_of_payment_l1_1:
   - text: |-
       you have selected any one of option 1. Payment Collection
@@ -1158,10 +1157,10 @@ responses:
       1. சங்க உறுப்பினர்களின் மாற்றத்திற்கான நடைமுறை ஆவணம்
       2. முதன்மை பக்கத்திற்கு திரும்பவும்
 
-
+#issue: fixed its a yaml intendation Error
   utter_ask_2nd_layer_tn_Payment_and_refund_of_payment:
   - text: |-
-      8 நீங்கள்  கட்டண சேவை தேர்ந்தெடுத்துள்ளீர்கள்				
+      8. நீங்கள் கட்டணம் செலுத்துதல் சேவை தேர்ந்தெடுத்துள்ளீர்கள்				
 
       1. கட்டணம் செலுத்துதல்				
       2. கட்டணத்  திருப்பு தொகை 								
