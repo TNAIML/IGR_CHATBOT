@@ -230,7 +230,7 @@ class ValidateBotForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `choices_1` value."""
 
-
+ 
         global v
         global y
         global w 
