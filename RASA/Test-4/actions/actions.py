@@ -1052,8 +1052,8 @@ class ValidateBotForm(FormValidationAction):
 
                 if slot_4 in list(Document_Registration_l1_3.keys()):
                     if slot_4 == '3':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None,"choices_4": None}
+                        dispatcher.utter_message(response = 'utter_ask_2nd_layer_en_Document_Registration' )
+                        return {"choices_3": None,"choices_4": None}
                     else:
                         dispatcher.utter_message(text = fourth_selection_dr3)
                         time.sleep(3)
@@ -1142,8 +1142,8 @@ class ValidateBotForm(FormValidationAction):
                     z = 'utter_ask_2nd_layer_en_Document_Registration_l2_16'
                     time.sleep(3)
                 elif  fourth_selection_dr4 == 'Go_back':
-                    dispatcher.utter_message(response = 'utter_lang_selection' )
-                    return {"choices_1": None,"choices_2": None, "choices_3": None,"choices_4": None}
+                    dispatcher.utter_message(response = 'utter_ask_2nd_layer_en_Document_Registration' )
+                    return {"choices_3": None,"choices_4": None}
                 else:
                     dispatcher.utter_message(response = "utter_ask_valid_responce")
                     return {"choices_4": None}
@@ -1458,8 +1458,10 @@ class ValidateBotForm(FormValidationAction):
 
                 if slot_4 in list(tn_Document_Registration_l1_3.keys()):
                     if slot_4 == '3':
-                        dispatcher.utter_message(response = 'utter_lang_selection' )
-                        return {"choices_1": None,"choices_2": None,"choices_3": None,"choices_4": None}
+                        dispatcher.utter_message(response = 'utter_ask_2nd_layer_tn_Document_Registration' )
+                        #original
+                        # return {"choices_1": None,"choices_2": None,"choices_3": None,"choices_4": None}
+                        return {"choices_3": None,"choices_4": None}
                     else:
                         dispatcher.utter_message(text = tn_fourth_selection_dr3)
                         time.sleep(3)

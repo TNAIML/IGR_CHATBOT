@@ -114,7 +114,7 @@ responses:
 
   utter_ask_2nd_layer_en_Document_Registration_l1_1:
   - text: | 
-      You have selected ption 1. Know Your Jurisdiction
+      You have selected option 1. Know Your Jurisdiction
 
       https://tnreginet.gov.in/portal/
 
